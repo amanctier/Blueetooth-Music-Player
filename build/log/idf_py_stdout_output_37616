@@ -1,0 +1,354 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Espressif\frameworks\esp-idf-v5.5\examples\bluetooth\bluedroid\classic_bt\a2dp_source - Copy\build\a2dp_source.elf C:\Espressif\frameworks\esp-idf-v5.5\examples\bluetooth\bluedroid\classic_bt\a2dp_source - Copy\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM5'
+0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0x�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 13:22:48[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2dd0ch (187660) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003dd34 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (153) esp_image: segment 2: paddr=0003dd5c vaddr=3ffbdb60 size=022bch (  8892) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b6110h (745744) map[0m
+[0;32mI (419) esp_image: segment 4: paddr=000f6138 vaddr=3ffbfe1c size=027ach ( 10156) load[0m
+[0;32mI (423) esp_image: segment 5: paddr=000f88ec vaddr=40080000 size=195a4h (103844) load[0m
+[0;32mI (476) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (476) boot: Disabling RNG early entropy source...[0m
+[0;32mI (486) cpu_start: Multicore app[0m
+[0;32mI (495) cpu_start: Pro cpu start user code[0m
+[0;32mI (495) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (495) app_init: Application information:[0m
+[0;32mI (495) app_init: Project name:     a2dp_source[0m
+[0;32mI (499) app_init: App version:      v5.5-dirty[0m
+[0;32mI (503) app_init: Compile time:     Oct 25 2025 13:22:18[0m
+[0;32mI (508) app_init: ELF file SHA256:  6e82db2b5...[0m
+[0;32mI (513) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (517) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (521) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (525) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (529) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCCA48 len 000135B8 (77 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 400995A4 len 00006A5C (26 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (578) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (591) coexist: coex firmware version: 831ec70[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (665) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (705) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (745) BT_AV: SD card mounted successfully[0m
+Name: SS32G
+Type: SDHC
+Speed: 16.00 MHz (limit: 15.00 MHz)
+Size: 30436MB
+CSD: ver=2, sector_size=512, capacity=62333952 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (755) BT_AV: SD card initialized successfully[0m
+[1;31mE (755) BT_AV: Failed to open WAV file: /sdcard/BlackSheep.wav[0m
+[0;33mW (765) BT_AV: Failed to open WAV file initially - will retry later[0m
+[0;32mI (765) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (775) BTDM_INIT: Bluetooth MAC: 6c:c8:40:06:f8:46[0m
+[0;32mI (775) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1465) BT_AV: Own address:[6c:c8:40:06:f8:46][0m
+[0;33mW (1475) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1475) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1475) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1485) BT_AV: Starting device discovery...[0m
+[0;32mI (1495) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1495) BT_AV: event: 10[0m
+[0;32mI (1505) BT_AV: event: 10[0m
+[0;32mI (1505) BT_AV: event: 10[0m
+[0;32mI (1505) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1515) BT_AV: Discovery started.[0m
+[0;32mI (1515) main_task: Returned from app_main()[0m
+[0;32mI (1885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (2285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (2685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (4285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (4685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (6285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (6685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (8285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (8685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (10285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (10685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (12285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (12685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (14285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (14315) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (14325) BT_AV: Discovery started.[0m
+[0;32mI (14685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (16285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (16685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (18285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (18685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (19085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (19485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (19885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (20285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (20685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (21085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (21485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (21885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (22285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (22685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (23085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (23485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (23885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (24285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (24685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (25085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (25485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (25885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (26285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (26685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (27085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (27125) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (27135) BT_AV: Discovery started.[0m
+[0;32mI (27485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (27885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (28285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (28685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (29085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (29485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (29885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (30285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (30685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (31085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (31485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (31885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (32285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (32685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (33085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (33485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (33885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (34285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (34685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (35085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (35485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (35885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (36285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (36685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (37085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (37485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (37885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (38285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (38685) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (39085) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (39485) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (39885) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (39935) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (39945) BT_AV: Discovery started.[0m
+[0;32mI (40285) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (40405) BT_AV: Scanned device: 04:29:2e:f2:94:bf[0m
+[0;32mI (40405) BT_AV: --Class of Device: 0x244404[0m
+[0;32mI (40405) BT_AV: --RSSI: -45[0m
+[0;32mI (40405) BT_AV: Found a target device, address 04:29:2e:f2:94:bf, name Mujib's Buds2 Pro #2[0m
+[0;32mI (40415) BT_AV: Cancel device discovery ...[0m
+[0;32mI (40425) BT_AV: Device discovery stopped.[0m
+[0;32mI (40425) BT_AV: a2dp connecting to peer: Mujib's Buds2 Pro #2[0m
+[0;33mW (40435) BT_APPL: reset flags[0m
+[0;32mI (40435) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (40685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;33mW (40915) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (40925) BT_AV: event: 16[0m
+[0;32mI (41085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (41135) BT_AV: event: 21[0m
+[0;32mI (41325) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0x2[0m
+[0;32mI (41425) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0x9[0m
+[0;32mI (41425) BT_AV: bt_app_av_state_unconnected_hdlr, delay value: 2400 * 1/10 ms[0m
+[0;33mW (41465) BT_APPL: new conn_srvc id:18, app_id:0[0m
+[0;32mI (41475) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0x0[0m
+[0;32mI (41485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (41485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;33mW (41655) BT_APPL: bta_av_proc_meta_cmd unhandled RC vendor PDU: 0x30[0m
+[0;32mI (41715) RC_CT: AVRC conn_state event: state 1, [04:29:2e:f2:94:bf][0m
+[0;32mI (41715) RC_CT: AVRC remote features 24b, TG features 2[0m
+[0;32mI (41755) RC_CT: remote rn_cap: count 1, bitmask 0x2000[0m
+[0;32mI (41885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (42285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (42685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (42685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (43085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (43375) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x9[0m
+[0;32mI (43375) BT_AV: bt_app_av_state_connecting_hdlr, delay value: 2400 * 1/10 ms[0m
+[0;32mI (43485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (43885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (43885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (44285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (44685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (45085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (45085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (45485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (45885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (46285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (46285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (46685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (47085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (47485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (47485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (47885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (48285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;33mW (48665) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(400 800)[0m
+[0;32mI (48685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (48685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;33mW (48695) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (48695) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 2[0m
+[0;32mI (49085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (49485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (49885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (49885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (50285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (50685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (51085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (51085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (51485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (51885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (52285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (52285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (52685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (53085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (53485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (53485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (53885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (54285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (54685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (54685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (55085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (55485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (55885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (55885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (56285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (56685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (57085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (57085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (57485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (57885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (58285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (58285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (58685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (59085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (59485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (59485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (59885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (60285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (60685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (60685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (61085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (61485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (61885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (61885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (62285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (62685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (63085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (63085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (63485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (63885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (64285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (64285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (64685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (65085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (65485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (65485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (65885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (66285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (66685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (66685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (67085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (67485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (67885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (67885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (68285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (68685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (69085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (69085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (69485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (69885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (70285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (70285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (70685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (71085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (71485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (71485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (71885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (72285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (72685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (72685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (73085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (73485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (73885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (73885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (74285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (74685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (75085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (75085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (75485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (75885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (76285) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (76285) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (76685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (77085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (77485) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (77485) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (77885) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (78285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (78685) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (78685) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (79085) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (79485) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (79885) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (79885) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m
+[0;32mI (80285) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (80685) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;32mI (81085) BT_AV: bt_app_av_sm_hdlr state: 3, event: 0xff00[0m
+[0;32mI (81085) BT_AV: a2dp connecting to peer: 04:29:2e:f2:94:bf[0m

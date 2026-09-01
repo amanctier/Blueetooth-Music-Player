@@ -1,0 +1,2881 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 C:\Espressif\frameworks\esp-idf-v5.5\examples\bluetooth\bluedroid\classic_bt\a2dp_source - Copy\build\a2dp_source.elf C:\Espressif\frameworks\esp-idf-v5.5\examples\bluetooth\bluedroid\classic_bt\a2dp_source - Copy\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM5'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 25 2025 13:22:48[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00177000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2dcfch (187644) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003dd24 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (153) esp_image: segment 2: paddr=0003dd4c vaddr=3ffbdb60 size=022cch (  8908) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=b6110h (745744) map[0m
+[0;32mI (419) esp_image: segment 4: paddr=000f6138 vaddr=3ffbfe2c size=0279ch ( 10140) load[0m
+[0;32mI (423) esp_image: segment 5: paddr=000f88dc vaddr=40080000 size=195a4h (103844) load[0m
+[0;32mI (476) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (476) boot: Disabling RNG early entropy source...[0m
+[0;32mI (486) cpu_start: Multicore app[0m
+[0;32mI (495) cpu_start: Pro cpu start user code[0m
+[0;32mI (495) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (495) app_init: Application information:[0m
+[0;32mI (495) app_init: Project name:     a2dp_source[0m
+[0;32mI (499) app_init: App version:      v5.5-dirty[0m
+[0;32mI (503) app_init: Compile time:     Oct 25 2025 14:49:08[0m
+[0;32mI (508) app_init: ELF file SHA256:  2766b2e82...[0m
+[0;32mI (513) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (517) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (521) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (525) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (529) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCCA48 len 000135B8 (77 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 400995A4 len 00006A5C (26 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (578) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (591) coexist: coex firmware version: 831ec70[0m
+[0;32mI (595) main_task: Started on CPU0[0m
+[0;32mI (605) main_task: Calling app_main()[0m
+[0;32mI (665) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (705) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (745) BT_AV: SD card mounted successfully[0m
+Name: SS32G
+Type: SDHC
+Speed: 16.00 MHz (limit: 15.00 MHz)
+Size: 30436MB
+CSD: ver=2, sector_size=512, capacity=62333952 read_bl_len=9
+SSR: bus_width=1
+[0;32mI (755) BT_AV: SD card initialized successfully[0m
+[0;32mI (765) BT_AV: WAV file info:[0m
+[0;32mI (765) BT_AV:   Channels: 2[0m
+[0;32mI (765) BT_AV:   Sample rate: 44100 Hz[0m
+[0;32mI (765) BT_AV:   Bits per sample: 16[0m
+[0;32mI (765) BT_AV:   Data size: 198 bytes[0m
+[0;32mI (775) BT_AV: WAV file opened successfully[0m
+[0;32mI (775) BTDM_INIT: BT controller compile version [b992c7d][0m
+[0;32mI (785) BTDM_INIT: Bluetooth MAC: 6c:c8:40:06:f8:46[0m
+[0;32mI (785) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (1465) BT_AV: Own address:[6c:c8:40:06:f8:46][0m
+[0;32mI (1475) BT_AV: Starting device discovery...[0m
+[1;31mE (1475) RC_CT: Invalid AVRC event: 10[0m
+[0;33mW (1475) BT_BTC: btc_avrc_tg_set_rn_supported_evt failed: AVRC TG not yet initialized[0m
+
+[0;33mW (1475) BT_BTC: A2DP Enable with AVRC[0m
+[0;33mW (1485) BT_AVRC: For AVRCP Target Cateory 1 and 3, SDP record shall contain additional protocol list[0m
+[0;32mI (1505) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0x4[0m
+[0;32mI (1505) BT_AV: event: 10[0m
+[0;32mI (1505) BT_AV: event: 10[0m
+[0;32mI (1515) BT_AV: event: 10[0m
+[0;32mI (1515) BT_AV: event: 10[0m
+[0;32mI (1515) BT_AV: ESP_BT_GAP_GET_DEV_NAME_CMPL_EVT device name: ESP_A2DP_SRC[0m
+[0;32mI (1515) BT_AV: Discovery started.[0m
+[0;32mI (1505) main_task: Returned from app_main()[0m
+[0;32mI (1875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (2275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (2675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (3875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (4275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (4675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (5875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (6275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (6675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (7875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (8275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (8675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (9875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (10275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (10675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (11875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (12275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (12675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (13875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (14275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (14325) BT_AV: Device discovery failed, continue to discover...[0m
+[0;32mI (14325) BT_AV: Discovery started.[0m
+[0;32mI (14675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (15875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (16275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (16675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17475) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (17875) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (18275) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (18675) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (19075) BT_AV: bt_app_av_sm_hdlr state: 1, event: 0xff00[0m
+[0;32mI (19265) BT_AV: Scanned device: f4:4e:fc:aa:6b:9e[0m
+[0;32mI (19265) BT_AV: --Class of Device: 0x240404[0m
+[0;32mI (19265) BT_AV: --RSSI: -64[0m
+[0;32mI (19265) BT_AV: Found a target device, address f4:4e:fc:aa:6b:9e, name Tribit XSound Go[0m
+[0;32mI (19275) BT_AV: Cancel device discovery ...[0m
+[0;32mI (19285) BT_AV: Device discovery stopped.[0m
+[0;32mI (19285) BT_AV: a2dp connecting to peer: Tribit XSound Go[0m
+[0;33mW (19285) BT_APPL: reset flags[0m
+[0;32mI (19295) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (19475) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0xff00[0m
+[0;33mW (19505) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;32mI (19505) BT_AV: event: 16[0m
+[0;32mI (19675) BT_AV: event: 21[0m
+[0;32mI (19705) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x2[0m
+[0;33mW (19745) BT_APPL: new conn_srvc id:18, app_id:0[0m
+[0;32mI (19745) BT_AV: bt_app_av_sm_hdlr state: 4, event: 0x0[0m
+[0;32mI (19745) BT_AV: a2dp connected[0m
+[0;32mI (19825) RC_CT: AVRC conn_state event: state 1, [f4:4e:fc:aa:6b:9e][0m
+[0;32mI (19825) RC_CT: AVRC remote features 24b, TG features 2[0m
+[0;32mI (19835) RC_CT: remote rn_cap: count 1, bitmask 0x2000[0m
+[0;32mI (19875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (19875) BT_AV: a2dp media ready checking ...[0m
+[0;32mI (19875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x3[0m
+[0;32mI (19875) BT_AV: a2dp media ready, starting ...[0m
+[0;33mW (19885) BT_APPL: new conn_srvc id:18, app_id:1[0m
+[0;32mI (19895) BT_LOG: bta_av_link_role_ok hndl:x41 role:0 conn_audio:x1 bits:1 features:x864b[0m
+
+[0;32mI (19895) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x3[0m
+[0;32mI (19905) BT_AV: a2dp media start successfully.[0m
+[0;32mI (19905) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0x1[0m
+[0;32mI (20275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (20675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (21075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (21475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (21875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (22275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (22675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (23075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (23475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (23625) RC_CT: AVRC event notification: 13[0m
+[0;32mI (23625) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (23875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (23875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (24275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (24675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (25075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (25475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (25875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (26275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (26675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (27075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (27475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (27875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (27875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (28275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (28675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (29075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (29265) RC_CT: AVRC event notification: 13[0m
+[0;32mI (29265) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (29475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (29875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (30275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (30675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (31875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (32275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (32675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (33075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (33475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (33875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (34275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (34675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (35075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (35135) RC_CT: AVRC event notification: 13[0m
+[0;32mI (35135) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (35475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (35875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (35875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (36275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (36675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (37075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (37475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (37875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (38275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (38675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (39075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (39475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (39875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (39875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (40275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (40675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (41075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (41475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (41875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (42275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (42675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (43075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (43475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (43875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (43875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (44275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (44675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (45075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (45475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (45875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (46275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (46675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (47075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (47475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (47875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (47875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (48275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (48675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (49075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (49475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (49875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (50275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (50675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (51075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (51475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (51875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (51875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (52275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (52675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (53075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (53475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (53875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (54275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (54675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (55075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (55475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (55875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (55875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (56275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (56675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (57075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (57475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (57875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (58275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (58675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (59075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (59475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (59875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (59875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (60275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (60675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (61075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (61475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (61875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (62275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (62675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (63075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (63475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (63875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (63875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (64275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (64675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (65075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (65475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (65875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (66275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (66675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (67075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (67475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (67875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (67875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (68275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (68675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (69075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (69475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (69875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (70275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (70675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (71075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (71475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (71875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (71875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (72275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (72675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (73075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (73475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (73875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (74275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (74675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (75075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (75475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (75875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (75875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (76275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (76675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (77075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (77475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (77875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (78275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (78675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (79075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (79475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (79875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (79875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (80275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (80675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (81075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (81475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (81875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (82275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (82675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (83075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (83475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (83875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (83875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (84275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (84675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (85075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (85475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (85875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (86275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (86675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (87075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (87475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (87875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (87875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (88275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (88675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (89075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (89475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (89875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (90275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (90675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (91075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (91475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (91875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (91875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (92275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (92675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (93075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (93475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (93875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (94275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (94675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (95075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (95475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (95875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (95875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (96275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (96675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (97075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (97475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (97875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (98275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (98675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (99075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (99475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (99875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (99875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (100275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (100525) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (100605) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (100675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (100675) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (100805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (100845) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (100895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101035) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101055) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101065) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (101075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (101175) BT_OSI: malloc failed (caller=0x4011c4b3 size=4112)[0m
+
+[1;31mE (101175) BT_APPL: ERROR btc_media_aa_prep_sbc_2_send no buffer TxCnt 24 [0m
+[1;31mE (101215) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101235) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101255) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101275) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101285) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101315) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101335) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101415) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101445) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101445) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (101475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (101495) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101515) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101535) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101545) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101595) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101605) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101615) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101625) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101635) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101645) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101665) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101675) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101715) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101725) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101755) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101785) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101795) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101835) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101865) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (101875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (101895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101905) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101925) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101965) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101985) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (101995) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102025) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102115) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102165) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102185) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102195) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (102205) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (102275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (102675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (103075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (103475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (103875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (103875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (104275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (104675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (105075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (105475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (105875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (106275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (106675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (107075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (107475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (107875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (107875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (108275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (108675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (109075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (109475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (109875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (110275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (110675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (111075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (111475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (111875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (111875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (112275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (112675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (112875) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113035) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (113075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (113085) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113115) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113135) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113185) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113195) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113245) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113255) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113295) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113355) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113435) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (113475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (113495) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113515) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113535) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113555) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113565) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113625) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113645) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113655) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113675) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113685) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113705) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113715) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113745) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113765) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113775) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113815) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113825) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113845) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (113875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (113875) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113885) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113915) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113945) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113975) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (113985) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (114005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (114015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (114025) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (114275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (114675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (115075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (115475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (115875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (115875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (116275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (116675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (117075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (117475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (117875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (118275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (118675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (119075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (119475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (119875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (119875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (120275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (120675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (121075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (121475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (121875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (122275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (122675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (123075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (123475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (123875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (123875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (124275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (124675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (125075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (125475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (125875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (126275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (126675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (127075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (127475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (127875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (127875) BT_AV: a2dp media streaming continues...[0m
+[1;31mE (128015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (128035) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (128045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (128275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (128675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (129075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (129475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (129875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (130275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (130675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (131075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (131475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (131875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (131875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (132275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (132675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (133075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (133475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (133875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (133955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (134275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (134675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (135075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (135475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (135875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (135875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (136275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (136675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (137075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (137475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (137875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (138275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (138675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (139075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (139475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (139875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (139875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (140275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (140675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (141075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (141475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (141875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (142275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (142675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (143075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (143475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (143875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (143875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (144275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (144675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (145075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (145475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (145875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (146275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (146675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (147075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (147475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (147875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (147875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (148275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (148675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (149075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (149475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (149875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (150275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (150675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (151075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (151475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (151875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (151875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (152275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (152675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (153075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (153475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (153875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (154275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (154675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (155075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (155475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (155875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (155875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (156275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (156675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (157075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (157475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (157875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (158275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (158675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (159075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (159475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (159875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (159875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (160275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (160675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (161075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (161475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (161875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (162275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (162675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (163075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (163475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (163875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (163875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (164275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (164675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (165075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (165475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (165875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (166275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (166675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (167075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (167475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (167875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (167875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (168275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (168675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (169075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (169475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (169875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (170275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (170675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (171075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (171475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (171875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (171875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (172275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (172675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (173075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (173475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (173875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (174275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (174675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (175075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (175475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (175875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (175875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (176275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (176675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (177075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (177475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (177875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (178275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (178675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (179075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (179475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (179875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (179875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (180275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (180675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (181075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (181475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (181875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (182275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (182675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (183075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (183475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (183875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (183875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (184275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (184675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (185075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (185475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (185875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (186275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (186675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (187075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (187475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (187875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (187875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (188275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (188675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (189075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (189475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (189875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (190275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (190675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (191075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (191475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (191875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (191875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (192275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (192675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (193075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (193475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (193875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (194275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (194675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (195075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (195475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (195875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (195875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (196275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (196675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (197075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (197475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (197875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (198275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (198675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (199075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (199475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (199875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (199875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (200275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (200675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (201075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (201475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (201875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (202275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (202675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (203075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (203475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (203875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (203875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (204275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (204675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (205075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (205475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (205875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (206275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (206675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (207075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (207475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (207875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (207875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (208275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (208675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (209075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (209475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (209875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (210275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (210675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (211075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (211475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (211875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (211875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (212275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (212675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (213075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (213475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (213875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (214275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (214675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (215075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (215475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (215875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (215875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (216275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (216675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (217075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (217475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (217875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (218275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (218675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (219075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (219475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (219875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (219875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (220275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (220675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (221075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (221295) RC_CT: AVRC event notification: 13[0m
+[0;32mI (221295) RC_CT: Volume changed (sink): 31[0m
+[0;32mI (221475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (221685) RC_CT: AVRC event notification: 13[0m
+[0;32mI (221685) RC_CT: Volume changed (sink): 39[0m
+[0;32mI (221875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (221975) RC_CT: AVRC event notification: 13[0m
+[0;32mI (221985) RC_CT: Volume changed (sink): 47[0m
+[0;32mI (222195) RC_CT: AVRC event notification: 13[0m
+[0;32mI (222195) RC_CT: Volume changed (sink): 55[0m
+[0;32mI (222275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (222455) RC_CT: AVRC event notification: 13[0m
+[0;32mI (222455) RC_CT: Volume changed (sink): 63[0m
+[0;32mI (222675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (222705) RC_CT: AVRC event notification: 13[0m
+[0;32mI (222705) RC_CT: Volume changed (sink): 71[0m
+[0;32mI (222975) RC_CT: AVRC event notification: 13[0m
+[0;32mI (222975) RC_CT: Volume changed (sink): 79[0m
+[0;32mI (223075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (223235) RC_CT: AVRC event notification: 13[0m
+[0;32mI (223235) RC_CT: Volume changed (sink): 87[0m
+[0;32mI (223445) RC_CT: AVRC event notification: 13[0m
+[0;32mI (223445) RC_CT: Volume changed (sink): 95[0m
+[0;32mI (223475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (223715) RC_CT: AVRC event notification: 13[0m
+[0;32mI (223715) RC_CT: Volume changed (sink): 103[0m
+[0;32mI (223875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (223875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (224275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (224675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (225075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (225475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (225875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (226275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (226675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (227075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (227475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (227875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (227875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (228275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (228675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (229075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (229475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (229875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (230275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (230675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (231075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (231275) RC_CT: AVRC event notification: 13[0m
+[0;32mI (231275) RC_CT: Volume changed (sink): 111[0m
+[0;32mI (231475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (231875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (231875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (232275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (232675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (233075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (233475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (233875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (234275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (234675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (234995) RC_CT: AVRC event notification: 13[0m
+[0;32mI (234995) RC_CT: Volume changed (sink): 119[0m
+[0;32mI (235075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (235245) RC_CT: AVRC event notification: 13[0m
+[0;32mI (235245) RC_CT: Volume changed (sink): 127[0m
+[0;32mI (235475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (235875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (235875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (236275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (236675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (237075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (237475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (237875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (238215) RC_CT: AVRC event notification: 13[0m
+[0;32mI (238215) RC_CT: Volume changed (sink): 127[0m
+[0;32mI (238275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (238675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (239075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (239475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (239875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (239875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (240275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (240675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (241075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (241475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (241875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (242275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (242675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (243075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (243475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (243875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (243875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (244225) BT_AV: End of WAV file reached, looping...[0m
+[0;32mI (244275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (244675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (245075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (245475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (245875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (245945) RC_CT: AVRC event notification: 13[0m
+[0;32mI (245945) RC_CT: Volume changed (sink): 119[0m
+[0;32mI (246165) RC_CT: AVRC event notification: 13[0m
+[0;32mI (246165) RC_CT: Volume changed (sink): 111[0m
+[0;32mI (246275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (246375) RC_CT: AVRC event notification: 13[0m
+[0;32mI (246375) RC_CT: Volume changed (sink): 103[0m
+[0;32mI (246575) RC_CT: AVRC event notification: 13[0m
+[0;32mI (246575) RC_CT: Volume changed (sink): 95[0m
+[0;32mI (246675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (246855) RC_CT: AVRC event notification: 13[0m
+[0;32mI (246855) RC_CT: Volume changed (sink): 87[0m
+[0;32mI (247065) RC_CT: AVRC event notification: 13[0m
+[0;32mI (247065) RC_CT: Volume changed (sink): 79[0m
+[0;32mI (247075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (247415) RC_CT: AVRC event notification: 13[0m
+[0;32mI (247415) RC_CT: Volume changed (sink): 71[0m
+[0;32mI (247475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (247875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (247875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (248275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (248675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (249065) RC_CT: AVRC event notification: 13[0m
+[0;32mI (249065) RC_CT: Volume changed (sink): 63[0m
+[0;32mI (249075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (249475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (249875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (250275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (250675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (251075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (251475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (251875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (251875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (252275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (252335) RC_CT: AVRC event notification: 13[0m
+[0;32mI (252335) RC_CT: Volume changed (sink): 55[0m
+[0;32mI (252575) RC_CT: AVRC event notification: 13[0m
+[0;32mI (252575) RC_CT: Volume changed (sink): 47[0m
+[0;32mI (252675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (252885) RC_CT: AVRC event notification: 13[0m
+[0;32mI (252885) RC_CT: Volume changed (sink): 39[0m
+[0;32mI (253075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (253155) RC_CT: AVRC event notification: 13[0m
+[0;32mI (253155) RC_CT: Volume changed (sink): 31[0m
+[0;32mI (253475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (253745) RC_CT: AVRC event notification: 13[0m
+[0;32mI (253745) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (253875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (254275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (254675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (254815) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (254845) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (254855) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (254895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (254975) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255055) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (255075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (255075) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255185) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255215) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255275) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255295) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255345) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255365) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255405) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255445) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255465) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (255475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (255485) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255515) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255525) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255575) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255585) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255595) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255615) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255645) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255705) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255755) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255785) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255785) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255845) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (255875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (255875) BT_AV: a2dp media streaming continues...[0m
+[1;31mE (255875) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255925) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255945) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255965) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255985) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (255995) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256055) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256075) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256095) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256125) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256145) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256175) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (256185) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (256275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (256675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (257075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (257475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (257875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (257985) RC_CT: AVRC event notification: 13[0m
+[0;32mI (257985) RC_CT: Volume changed (sink): 15[0m
+[0;32mI (258275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (258675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (259075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (259235) RC_CT: AVRC event notification: 13[0m
+[0;32mI (259235) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (259475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (259715) RC_CT: AVRC event notification: 13[0m
+[0;32mI (259715) RC_CT: Volume changed (sink): 31[0m
+[0;32mI (259875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (259875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (260275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (260675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (261075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (261475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (261875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (262275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (262675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (263075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (263475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (263875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (263875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (264275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (264675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (265075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (265475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (265875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (266275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (266675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (267075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (267475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (267875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (267875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (268275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (268675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (269075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (269475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (269875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (270275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (270675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (271075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (271475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (271875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (271875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (272275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (272675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (273075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (273475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (273875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (274275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (274675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (275075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (275475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (275875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (275875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (276275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (276675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (277075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (277475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (277875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (278275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (278675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (279075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (279475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (279875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (279875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (280275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (280675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (281075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (281475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (281875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (282275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (282675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (283075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (283475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (283875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (283875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (284275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (284675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (285075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (285475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (285875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (286275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (286675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (287075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (287475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (287875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (287875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (288275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (288675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (289075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (289475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (289875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (290275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (290675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (291075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (291475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (291875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (291875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (292275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (292675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (293075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (293475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (293875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (294275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (294675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (295075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (295475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (295875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (295875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (296275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (296675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (297075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (297475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (297875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (298275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (298675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (299075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (299475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (299875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (299875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (300275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (300675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (301075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (301475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (301875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (302275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (302675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (303075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (303475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (303875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (303875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (304275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (304675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (305075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (305475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (305875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (306275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (306675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (307075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (307475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (307875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (307875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (308275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (308675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (309075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (309475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (309875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (310275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (310675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (311075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (311475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (311865) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (311875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (311875) BT_AV: a2dp media streaming continues...[0m
+[1;31mE (311895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (311945) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312175) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312225) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312245) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (312275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (312305) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312345) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312375) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312425) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312455) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312475) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312515) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312525) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312535) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312565) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312575) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312605) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312615) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312625) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312635) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312655) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (312675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (312675) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312695) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312705) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312725) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312725) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312745) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312755) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312765) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312775) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312925) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (312995) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313025) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313055) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (313075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (313105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313125) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313125) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313145) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313155) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313185) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313215) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313225) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313335) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313355) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (313475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (313775) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313825) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313835) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313855) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (313875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (313875) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313885) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313905) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (313915) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314045) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314065) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314075) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314135) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314145) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314205) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314235) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314235) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314255) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314265) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (314275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (314285) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314305) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314315) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314405) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314415) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314485) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314515) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314525) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314585) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314615) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (314625) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (314675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (315075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (315475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (315875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (315875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (316275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (316675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (317075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (317475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (317875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (318275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (318675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (319075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (319475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (319875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (319875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (320275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (320675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (321075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (321475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (321875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (322275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (322675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (323075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (323475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (323875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (323875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (324275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (324675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (325075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (325475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (325875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (326275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (326675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (327075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (327475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (327875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (327875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (328275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (328675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (329075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (329475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (329875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (330275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (330675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (331075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (331475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (331875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (331875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (332275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (332675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (333075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (333475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (333875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (334275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (334675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (335075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (335475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (335875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (335875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (336275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (336675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (337075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (337475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (337875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (338275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (338675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (339075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (339475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (339875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (339875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (340275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (340605) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340635) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340645) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (340675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (340685) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340775) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340845) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340855) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (340955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341065) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (341075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (341085) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341085) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341115) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341195) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341215) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341255) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341295) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341375) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341445) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (341475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (341485) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341505) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341545) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341545) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341565) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341575) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341585) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341595) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (341605) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (341875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (342275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (342675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (343075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (343475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (343875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (343875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (344275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (344675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (345075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (345475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (345875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (346275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (346675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (347075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (347475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (347875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (347875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (348275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (348675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (349075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (349475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (349875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (350275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (350675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (351075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (351475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (351875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (351875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (352275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (352675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (353075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (353475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (353875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (354275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (354675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (355075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (355475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (355875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (355875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (356275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (356675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (357075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (357475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (357875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (358275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (358675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (359075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (359475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (359875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (359875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (360275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (360675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (361075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (361475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (361875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (362275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (362675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (363075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (363475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (363875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (363875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (364275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (364675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (365075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (365475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (365875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (366275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (366675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (367075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (367475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (367875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (367875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (368275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (368675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (369075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (369475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (369875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (370275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (370675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (371075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (371475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (371875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (371875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (372275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (372675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (373075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (373475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (373875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (374275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (374675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (375075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (375475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (375875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (375875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (376275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (376675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (377075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (377475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (377875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (378275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (378675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (379075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (379475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (379875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (379875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (380275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (380675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (381075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (381475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (381875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (382275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (382675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (383075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (383475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (383875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (383875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (384275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (384335) RC_CT: AVRC event notification: 13[0m
+[0;32mI (384335) RC_CT: Volume changed (sink): 23[0m
+[0;32mI (384575) RC_CT: AVRC event notification: 13[0m
+[0;32mI (384575) RC_CT: Volume changed (sink): 15[0m
+[0;32mI (384675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (385075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (385145) RC_CT: AVRC event notification: 13[0m
+[0;32mI (385145) RC_CT: Volume changed (sink): 7[0m
+[0;32mI (385475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (385875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (386275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (386675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (387075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (387475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (387875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (387875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (388275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (388675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (389075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (389475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (389875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (390275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (390675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (391075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (391475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (391875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (391875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (392275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (392675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (393075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (393475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (393875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (394275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (394675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (395075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (395475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (395875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (395875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (396275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (396675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (397075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (397475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (397875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (398275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (398675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (399075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (399475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (399875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (399875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (400275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (400675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (401075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (401475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (401875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (402275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (402675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (403075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (403475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (403875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (403875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (404275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (404675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (405075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (405475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (405875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (406275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (406675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (407075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (407475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (407875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (407875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (408275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (408675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (409075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (409475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (409875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (410275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (410675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (411075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (411475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (411875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (411875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (412275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (412675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (413075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (413475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (413875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (414275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (414675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (415075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (415475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (415875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (415875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (416275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (416675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (417075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (417475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (417875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (418275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (418675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (419075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (419475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (419875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (419875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (420275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (420675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (421075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (421475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (421875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (422275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (422675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (423075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (423475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (423875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (423875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (424275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (424675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (425075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (425475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (425875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (426275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (426675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (427075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (427475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (427875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (427875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (428275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (428675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (429075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (429475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (429875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (430275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (430675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (431075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (431475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (431875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (431875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (432275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (432675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (433075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (433475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (433875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (434275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (434675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (435075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (435475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (435875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (435875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (436275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (436675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (437075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (437475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (437875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (438275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (438675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (439075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (439475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (439875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (439875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (440275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (440675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (441075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (441475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (441875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (442275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (442675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (443075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (443475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (443875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (443875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (444275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (444675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (445075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (445475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (445875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (446275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (446675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (447075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (447475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (447875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (447875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (448275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (448675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (449075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (449475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (449875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (450275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (450675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (451075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (451475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (451875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (451875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (452275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (452675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (453075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (453475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (453875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (454275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (454675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (455075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (455475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (455875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (455875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (456275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (456675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (457075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (457475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (457875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (458275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (458675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (459075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (459475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (459875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (459875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (460275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (460675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (461075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (461475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (461875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (462275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (462675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (463075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (463475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (463875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (463875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (464275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (464675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (465075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (465475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (465875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (466275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (466675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (467075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (467475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (467875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (467875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (468275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (468515) BT_AV: End of WAV file reached, looping...[0m
+[0;32mI (468675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (469075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (469475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (469875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (470275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (470675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (471075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (471475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (471875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (471875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (472275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (472675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (473075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (473475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (473875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (474275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (474675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (475075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (475475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (475875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (475875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (476275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (476675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (477075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (477475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (477875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (478275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (478675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (479075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (479475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (479875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (479875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (480275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (480675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (481075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (481475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (481875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (482275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (482675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (483075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (483475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (483875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (483875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (484275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (484675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (485075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (485475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (485875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (486275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (486675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (487075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (487475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (487875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (487875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (488275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (488675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (489075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (489475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (489875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (490275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (490675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (491075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (491475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (491875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (491875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (492275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (492675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (493075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (493475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (493875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (494275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (494675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (495075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (495475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (495875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (495875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (496275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (496675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (497075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (497475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (497875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (498275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (498675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (499075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (499475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (499875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (499875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (500275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (500675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (501075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (501475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (501875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (502275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (502675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (503075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (503475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (503875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (503875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (504275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (504675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (505075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (505475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (505875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (506275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (506675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (507075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (507475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (507875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (507875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (508275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (508675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (509075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (509475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (509875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (510275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (510675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (511075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (511475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (511875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (511875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (512275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (512675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (513075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (513475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (513875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (514275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (514675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (515075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (515475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (515875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (515875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (516275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (516675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (517075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (517475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (517875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (518275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (518675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (519075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (519475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (519875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (519875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (520275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (520675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (521075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (521475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (521875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (522275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (522675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (523075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (523475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (523875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (523875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (524275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (524675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (525075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (525475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (525875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (526275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (526675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (527075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (527475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (527875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (527875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (528275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (528675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (529075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (529475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (529875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (530275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (530675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (531075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (531475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (531875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (531875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (532275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (532675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (533075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (533475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (533875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (534275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (534675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (535075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (535475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (535875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (535875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (536275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (536675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (537075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (537475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (537875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (538275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (538675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (539075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (539475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (539875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (539875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (540275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (540675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (541075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (541475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (541875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (542275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (542675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (543075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (543475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (543875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (543875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (544275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (544675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (545075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (545475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (545875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (546275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (546675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (547075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (547475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (547875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (547875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (548275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (548675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (549075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (549475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (549875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (550275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (550675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (551075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (551475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (551875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (551875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (552275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (552675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (553075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (553475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (553875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (554275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (554675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (555075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (555475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (555875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (555875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (556275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (556675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (557075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (557475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (557875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (558275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (558675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (559075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (559475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (559875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (559875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (560275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (560675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (561075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (561475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (561875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (562275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (562675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (563075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (563475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (563875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (563875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (564275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (564675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (565075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (565475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (565875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (566275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (566675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (567075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (567475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (567875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (567875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (568275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (568675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (569075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (569475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (569875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (570275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (570675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (571075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (571475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (571875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (571875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (572275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (572675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (573075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (573475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (573875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (574275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (574675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (575075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (575475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (575875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (575875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (576275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (576675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (577075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (577475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (577875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (578275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (578675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (579075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (579475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (579875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (579875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (580275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (580675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (581075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (581475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (581875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (582275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (582675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (583075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (583475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (583875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (583875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (584275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (584675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (585075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (585475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (585875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (586275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (586675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (587075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (587475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (587875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (587875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (588275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (588675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (589075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (589475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (589875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (590275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (590675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (591075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (591475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (591875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (591875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (592275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (592675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (593075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (593475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (593875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (594275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (594675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (595075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (595475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (595875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (595875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (596275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (596675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (597075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (597475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (597875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (598275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (598675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (599075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (599475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (599875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (599875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (600275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (600675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (601075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (601475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (601875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (602275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (602675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (603075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (603475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (603875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (603875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (604275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (604675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (605075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (605475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (605875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (606275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (606675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (607075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (607475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (607875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (607875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (608275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (608675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (609075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (609475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (609875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (610275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (610675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (611075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (611475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (611875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (611875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (612275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (612675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (613075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (613475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (613875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (614275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (614675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (615075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (615475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (615875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (615875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (616275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (616675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (617075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (617475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (617875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (618275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (618675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (619075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (619475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (619875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (619875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (620275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (620675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (621075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (621475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (621875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (622275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (622675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (623075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (623475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (623875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (623875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (624275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (624675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (625075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (625475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (625875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (626275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (626675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (627075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (627475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (627875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (627875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (628275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (628675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (629075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (629475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (629875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (630275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (630675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (631075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (631475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (631875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (631875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (632275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (632675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (633075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (633475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (633875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (634275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (634675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (635075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (635475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (635875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (635875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (636275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (636675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (637075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (637475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (637875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (638275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (638675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (639075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (639475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (639875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (639875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (640275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (640675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (641075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (641475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (641875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (642275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (642675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (643075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (643475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (643875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (643875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (644275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (644675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (645075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (645475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (645875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (646275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (646675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (647075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (647475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (647875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (647875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (648275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (648675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (649075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (649325) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649335) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (649475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (649635) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649665) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649715) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649735) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649755) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649785) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649835) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649855) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649855) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (649875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (649895) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649905) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649925) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649945) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649955) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (649985) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650025) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650095) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650105) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650125) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (650135) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (650275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (650675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (651075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (651475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (651875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (651875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (652275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (652675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (653075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (653475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (653875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (654275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (654675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (655075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (655475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (655875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (655875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (656275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (656675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (657075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (657475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (657875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (658275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (658675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (659075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (659475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (659875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (659875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (660275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (660675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (661075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (661475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (661875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (662275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (662675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (663075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (663475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (663875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (663875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (664275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (664675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (665075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (665475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (665875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (666275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (666675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (667075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (667475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (667875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (667875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (668275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (668675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (669075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (669475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (669875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (670275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (670675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (671075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (671475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (671875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (671875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (672275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (672675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (673075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (673475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (673875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (674275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (674675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (675075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (675475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (675875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (675875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (676275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (676675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (677075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (677475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (677875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (678275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (678675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (679075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (679475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (679875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (679875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (680275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (680675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (681075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (681475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (681875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (682275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (682675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (683075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (683475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (683875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (683875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (684275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (684675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (685075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (685475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (685875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (686275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (686675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (687075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (687475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (687875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (687875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (688275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (688675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (689075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (689475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (689875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (690275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (690675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (691075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (691475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (691875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (691875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (692275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (692675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (692805) BT_AV: End of WAV file reached, looping...[0m
+[0;32mI (693075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (693475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (693875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (694275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (694675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (695075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (695475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (695875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (695875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (696275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (696675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (697075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (697475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (697875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (698275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (698675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (699075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (699475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (699875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (699875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (700275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (700675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (701075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (701475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (701875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (702275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (702675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (703075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (703475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (703875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (703875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (704275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (704675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (705075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (705475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (705875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (706275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (706675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (707075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (707475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (707875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (707875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (708275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (708675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (709075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (709475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (709875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (709965) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (710275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (710675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (711075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (711475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (711875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (711875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (712275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (712675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (713075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (713475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (713875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (714275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (714675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (715075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (715475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (715875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (715875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (716275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (716675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (717075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (717475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (717875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (718275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (718675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (719075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (719475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (719875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (719875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (720275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (720675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (721075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (721475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (721875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (722275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (722675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (723075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (723475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (723875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (723875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (724275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (724675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (725075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (725475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (725875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (726275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (726675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (727075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (727475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (727875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (727875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (728275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (728675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (729075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (729475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (729875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (730275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (730675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (731075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (731475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (731875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (731875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (732275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (732675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (733075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (733475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (733875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (734275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (734675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (735075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (735475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (735875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (735875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (736275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (736675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (737075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (737475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (737875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (738275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (738675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (739075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (739475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (739875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (739875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (740275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (740675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (741075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (741475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (741875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (742275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (742675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (743075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (743475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (743875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (743875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (744275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (744675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (745075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (745475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (745875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (746275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (746675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (747075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (747475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (747875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (747875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (748275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (748675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (749075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (749475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (749875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (750275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (750675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (751075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (751475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (751875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (751875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (752275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (752675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (753075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (753475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (753875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (754275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (754675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (755075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (755475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (755875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (755875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (756275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (756675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (757075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (757475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (757875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (758275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (758675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (759075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (759475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (759875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (759875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (760275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (760675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (761075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (761475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (761875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (762275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (762675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (763075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (763475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (763875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (763875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (764275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (764675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (765075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (765475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (765875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (766275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (766675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (767075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (767475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (767875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (767875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (768275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (768675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (769075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (769475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (769875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (770275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (770675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (771075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (771475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (771875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (771875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (772275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (772675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (773075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (773475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (773875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (774275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (774675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (775075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (775475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (775875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (775875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (776275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (776675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (777075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (777475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (777875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (778275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (778675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (779075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (779475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (779875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (779875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (780275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (780675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (781075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (781475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (781875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (782275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (782675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (783075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (783475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (783875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (783875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (784275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (784675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (785075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (785475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (785875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (786275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (786675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (787075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (787475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (787875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (787875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (788275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (788675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (788985) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (789075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (789345) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789455) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (789475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (789475) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789495) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789615) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789825) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789835) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (789875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (789935) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (789945) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (790275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (790625) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (790675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (790805) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (791075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (791475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (791875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (791875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (792275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (792675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (793075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (793475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (793875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (794275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (794675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (795075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (795475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (795875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (795875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (796275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (796675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (797075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (797475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (797875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (798275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (798675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (799075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (799475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (799875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (799875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (800275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (800675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (801075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (801475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (801875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (802275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (802675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (803075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (803475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (803875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (803875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (804275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (804675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (805075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (805475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (805875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (806275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (806675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (807075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (807475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (807875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (807875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (808275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (808675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (809075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (809475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (809875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (810275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (810675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (811075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (811475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (811875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (811875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (812275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (812675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (813075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (813475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (813875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (814275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (814675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (815075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (815475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (815875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (815875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (816275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (816675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (817075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (817475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (817875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (818275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (818675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (819075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (819475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (819875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (819875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (820275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (820675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (821075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (821475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (821875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (822275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (822675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (823075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (823475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (823875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (823875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (824275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (824675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (825075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (825475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (825875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (826275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (826675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (827075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (827475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (827875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (827875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (828275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (828675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (829075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (829475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (829875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (830275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (830675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (831075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (831475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (831875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (831875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (832275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (832675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (833075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (833475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (833875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (834275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (834675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (835075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (835475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (835875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (835875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (836275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (836675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (837075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (837475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (837875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (838275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (838675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (839075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (839475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (839875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (839875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (840275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (840675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (841075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (841475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (841875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (842275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (842675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (843075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (843475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (843875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (843875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (844275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (844675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (845075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (845475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (845875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (846275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (846675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (847075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (847475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (847875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (847875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (848275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (848675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (849075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (849475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (849875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (850275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (850675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (851075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (851475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (851875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (851875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (852275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (852675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[1;31mE (852975) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (853005) BT_L2CAP: l2cab is_cong_cback_context[0m
+[1;31mE (853015) BT_L2CAP: l2cab is_cong_cback_context[0m
+[0;32mI (853075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (853475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (853875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (854275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (854675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (855075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (855475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (855875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (855875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (856275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (856675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (857075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (857475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (857875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (858275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (858675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (859075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (859475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (859875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (859875) BT_AV: a2dp media streaming continues...[0m
+[0;32mI (860275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (860675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (861075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (861475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (861875) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (862275) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (862675) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (863075) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m
+[0;32mI (863475) BT_AV: bt_app_av_sm_hdlr state: 5, event: 0xff00[0m

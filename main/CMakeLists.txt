@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS
+        "bt_app_core.c"
+        "main.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        bt
+        nvs_flash
+        fatfs
+        sdmmc
+        driver
+        spi_flash
+)
