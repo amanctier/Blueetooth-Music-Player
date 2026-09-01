@@ -9,7 +9,7 @@ menu "A2DP Example Configuration"
 
     config EXAMPLE_PEER_DEVICE_NAME
         string "Target Device Name"
-        default "Mujib's Buds2 Pro #2"
+        default "Bluetooth_Device_Name"
         help
             Use this option to set target device name to connect.
 endmenu
